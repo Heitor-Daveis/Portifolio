@@ -4,64 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portifólio</title>
-    <link rel="stylesheet" href="/src/FlexBox/Css/Style.css">
+    <link rel="stylesheet" href="/src/FlexBox/Css/style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
     <header class="header">
         <div class="textos">
-            <div class="cabecalho">MEU<span class="span">PORTIFÓLIO</span></div>
+            
+            <div class="cabecalho">MEU<span class="span"> PORTIFÓLIO</span>
+                <div class="icone">&lt;/&gt;</div>
+            </div>
         </div>
 
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburguer">&#9776;</label>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburguer">&#9776;</label>
 
         <nav class="nav">
             <div class="menu">
-                <a href="#inicio">PROJETOS</a>
-                <a href="#programacao">HABILIDADES</a>
-                <a href="#palestrantes">SOBRE</a>
-                <a href="#inscricoes">CONTATO</a>
+                <a href="#inicio">INICIO</a>
+                <a href="#sobre">SOBRE</a>
+                <a href="#projetos">PROJETOS</a>
+                <a href="#contato">CONTATOS</a>
             </div>
         </nav>
     </header>
 
     <main>
+
         <section class="hero" id="inicio">
-            <h1></h1>
-            <p></p>
-            <a href="" class="botao"></a>
+            <section class="apresentacao">
+                
+                <div class="primeiro">
+                    <h3>OLÁ, EU SOU</h3>
+                </div>
+
+                <div class="segundo">
+                    <h1>HEITOR DAVEIS!</h1>
+                </div>
+
+                <div class="terceiro">
+                    <p>DESENVOLVEDOR WEB APAIXONADO POR TECNOLOGIA, APRENDIZADO E NOVOS DESAFIOS.</p>
+                </div>
+
+        </section>
+            <a href="" class="botao">
+                <span class="icone">&#128640;</span>
+                <h1>CONHEÇA MEUS PROJETOS</h1>
+                <span class="icone">&#8595;</span>
+            </a>
         </section>
 
         <section class="cards">
             <article class="card card-projetos" id="projetos">
-                <div class="icone">&lt;/&gt;</div>
+                <div class="icone">&#128187;</div>
                 <div>
                     <h2>PROJETOS</h2>
-                    <p></p>
+                    <p>VEJA MEUS TRABALHOS E SOLUÇÕES.</p>
                 </div>
             </article>
 
             <article class="card card-habilidades" id="habilidades">
-                <div class="icone">&#128101;</div>
+                <div class="icone">&lt;/&gt;</div>
                 <div>
                     <h2>HABILIDADES</h2>
-                    <p></p>
+                    <p>CONHEÇA MINHAS TECNOLOGIAS.</p>
                 </div>
             </article>
 
             <article class="card card-sobre" id="sobre">
-                <div class="icone">&#128196;</div>
+                <div class="icone">&#128100;</div>
                 <div>
                     <h2>SOBRE MIM</h2>
-                    <p></p>
+                    <p>UM POUCO DA MINHA HISTÓRIA</p>
                 </div>
             </article>
 
             <article class="card card-contato" id="contato">
-                <div class="icone">&#128196;</div>
+                <div class="icone">&#9993;</div>
                 <div>
                     <h2>CONTATO</h2>
-                    <p></p>
+                    <p>VAMOS CONVERSAR!</p>
                 </div>
             </article>
         </section>

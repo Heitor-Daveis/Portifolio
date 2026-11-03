@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --vermelho: #E11D48;
+  --preto: #0A0A0F;
+  --laranja: #FF7A18;
+  --roxo: #8B3DFF;
+  --rosa: #FF3D9A;
+
+  --vermelho-escuro: #9F1239;
+  --laranja-claro: #FFB36B;
+  --roxo-escuro: #5B21B6;
+  --rosa-claro: #FFA3D1;
+
+  --fundo: #FFFFFF;
+  --fundo-secundario: #14111F;
+  --superficie: #1C1730;
+  --borda: rgba(255, 255, 255, 0.10);
+
+  --texto: #0A0A0F;
+  --texto-suave: #14111F;
+  --branco: #FFFFFF;
+
+  --card-icones-bg: rgba(139, 61, 255, 0.14);
+  --card-icones-cor: #F8F8FF;
+
+  --alerta-bg: rgba(225, 29, 72, 0.15);
+  --alerta-cor: #FF4D6D;
+
+  --gradiente-principal: linear-gradient(135deg, #E11D48 0%, #5B21B6 100%);
+  --gradiente-secundario: linear-gradient(135deg, #8B3DFF 0%, #FF3D9A 100%);
+  --gradiente-hero: linear-gradient(160deg, #0A0A0F 0%, #2A1146 55%, #5B1030 100%);
+
+  --sombra: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --brilho-rosa: 0 0 24px rgba(255, 61, 154, 0.45);
+  --brilho-roxo: 0 0 24px rgba(139, 61, 255, 0.45);
+
+  --raio: 16px;
+  --raio-grande: 24px;
+  --espaco: 1rem;
+
+  --fonte: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+  --peso-regular: 400;
+  --peso-medio: 500;
+  --peso-semibold: 600;
+  --peso-bold: 700;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: var(--fonte);
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--fundo-secundario);
+    box-shadow: var(--sombra);
+    border-bottom: 1px solid var(--borda);
+}
+
+
+.textos {
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho {
+    font-size: 1.2rem;
+    font-weight: var(--peso-bold);
+    color: var(--branco);
+    line-height: 1.1;
+}
+
+.span {
+    background: var(--gradiente-secundario);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav {
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.nav a {
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--vermelho);
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 0.8rem;
+    font-weight: var(--peso-semibold);
+    transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: var(--vermelho);
+}
+
+.hero {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background: var(--gradiente-hero);
+}
+
+.hero h1 {
+    margin: 0 0 1rem;
+    font-size: 3rem;
+    color: var(--branco);
+}
+
+.hero h3 {
+    margin: 0 0 1rem;
+    color: var(--branco);
+}
+
+.hero p {
+    margin: 0 auto 1.5rem;
+    max-width: 60ch;
+    color: var(--branco);
+    line-height: 1.6;
+}
+
+
+.botao {
+    display: inline-block;
+    padding: 0.9rem 1.75rem;
+    border-radius: var(--raio);
+    background: var(--gradiente-principal);
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: var(--peso-semibold);
+    box-shadow: var(--brilho-rosa);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: var(--raio-grande);
+    border: 1px solid var(--borda);
+}
+
+.card h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.1rem;
+}
+
+.card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+.icone {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--branco);
+    font-weight: var(--peso-bold);
+}
+
+.card-projetos { background: var(--card-icones-bg); border-color: var(--card-icones-cor); }
+.card-projetos .icone { background: var(--card-icones-cor); }
+
+.card-habilidades { background: var(--card-icones-bg); border-color: var(--card-icones-cor); }
+.card-habilidades .icone { background: var(--card-icones-cor); }
+
+.card-sobre { background: var(--card-icones-bg); border-color: var(--card-icones-cor); }
+.card-sobre .icone { background: var(--card-icones-cor); }
+
+.card-contato { background: var(--card-icones-bg); border-color: var(--card-icones-cor); }
+.card-contato .icone { background: var(--card-icones-cor); }
+
+.aviso-vagas {
+    display: none;
+    margin: 0 1.5rem 1.5rem;
+    padding: 1rem;
+    border-radius: var(--raio);
+    background: var(--alerta-bg);
+    border: 1px solid var(--alerta-cor);
+    color: var(--alerta-cor);
+    font-weight: var(--peso-semibold);
+}
+
+.rodape {
+    padding: 1.25rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--branco);
+    background: var(--fundo-secundario);
+    border-top: 1px solid var(--borda);
+}
+
+section, article {
+    scroll-margin-top: 130px;
+}
+
+@media (max-width: 499px) and (orientation: portrait) {
+    .aviso-vagas {
+        display: block;
+    }
+}
+
+@media (orientation: portrait) {
+    .hero { padding: 4rem 1.5rem; }
+    .hero h1 { font-size: 2.2rem; }
+}
+
+@media (orientation: landscape) {
+    .header {
+        flex-wrap: nowrap;
+        padding: 0.35rem 1.25rem;
+    }
+
+    .logo { width: 36px; height: 36px; }
+    .cabecalho { font-size: 1rem; }
+
+    .nav {
+        width: auto;
+        margin-left: auto;
+    }
+
+    .menu { flex-wrap: nowrap; }
+    .nav a { font-size: 0.7rem; padding: 0.35rem 0.8rem; }
+
+    .hero { padding: 1.75rem 1.5rem; text-align: left; }
+    .hero h1 { font-size: 1.6rem; }
+    .hero p { margin: 0 0 1.25rem; font-size: 0.85rem; }
+
+    .cards { grid-template-columns: repeat(3, 1fr); }
+    .card { flex-direction: column; align-items: flex-start; }
+
+    section, article { scroll-margin-top: 80px; }
+}
+
+.menu-toggle {
+    display: none;
+    overflow: hidden;
+}
+
+.hamburguer {
+    display: none;
+    margin-left: auto;
+    padding: 0.2rem 0.7rem;
+    border-radius: 8px;
+    background: var(--roxo);
+    color: var(--branco);
+    font-size: 1.5rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+@media (max-width: 499px) {
+    .hamburguer {
+        display: block;
+        overflow: hidden;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-toggle:checked ~ .nav {
+        display: block;
+        overflow: hidden;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+}
